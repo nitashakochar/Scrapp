@@ -1,14 +1,19 @@
 import React from "react";
 import { Component } from "react";
 
-
+const styles = {
+    margin: '20px',
+    width: '250px',
+    height: '250px',
+    backgroundColor: '#ddd',
+  };
 
 class Entry extends Component { 
     render() {
         let disp;
         if (this.props.display == "full"){
             disp = (
-                <div className="entryFull">
+                <div className="entryFull" style={styles}>
                     <h1>{this.props.entry.title}</h1>
                     <div className="tags">
                         <ul className="tagsRow" > 
