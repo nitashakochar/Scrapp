@@ -18,7 +18,7 @@
 
 .nav-bar ul li {
     display: flex;
-    justify-content: center;
+  justify-content: center;
   list-style-type: none;
   margin-top: 2.5%;
   font-size: 14px;
