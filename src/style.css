@@ -36,6 +36,13 @@
     height: 20%;
 }
 
+.entryCover {
+    width: 25%;
+    margin: 5%;
+    padding: 3%;
+    background: #f5f3f3;
+    box-shadow: 3px 3px gray;
+}
 
 
 li {
