@@ -1,5 +1,8 @@
 import React from "react";
 import Entry from "./entry";
+import Journal from "./journal";
+import Nav from "./Nav";
+
 
 const entryData = { people: ["Anna", "Shep"],
                     places: ["Dartmouth", "Thayer"], 
