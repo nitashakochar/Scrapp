@@ -1,4 +1,5 @@
 import React from "react";
+import Entry from "./entry";
 
 export default class App extends React.Component {
   render() {
@@ -8,6 +9,8 @@ export default class App extends React.Component {
         <button color="blue" shadowSize={2}>
           Click Me
         </button>
+        <Entry display="full"/>
+        <Entry display="cover"/>
       </div>
     );
   }
