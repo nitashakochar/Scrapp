@@ -43,7 +43,8 @@ class Entry extends Component {
                                 } )}
                             </div>
                         </div>) 
-                : tags = <div className="tagsRow"></div>;
+                : 
+                tags = <div className="tagsRow"></div>;
             disp = (
                 <div className="entryFull" >
                     <div className="titleRow">
