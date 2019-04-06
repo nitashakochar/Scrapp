@@ -63,7 +63,11 @@ class Entry extends Component {
             )
         }
         else {
-            disp = <div>Entry Cover</div>;
+            disp = (
+                <div className="entryCover">
+                    <h1>{this.props.entry.title}</h1>
+                    <p>{this.props.entry.content}</p>
+                </div>);
         }
         return (disp)
     }
