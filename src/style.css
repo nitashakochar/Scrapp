@@ -1,0 +1,51 @@
+.titleRow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.tags {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    text-align: left;
+}
+.tagsRow {
+    display: flex;
+    flex-direction: row;
+    background-color: grey;
+    margin: 2%;
+    justify-content: flex-start;
+}
+.tagsRow li {
+    background-color: rgb(143, 136, 44);
+    padding: 2%;
+
+}
+.tag {
+    background: tan;
+    padding: 2%;
+    margin: 0 2%;
+}
+.entryImages {
+    display: flex;
+    flex-direction: row; 
+}
+.entryImages img {
+    width: 20%;
+    height: 20%;
+}
+
+
+
+li {
+    list-style-type: none;
+    margin: 0 2%;
+}
+ul {
+    margin: 2%;
+}
+button {
+    background: inherit;
+    border: none;
+}
