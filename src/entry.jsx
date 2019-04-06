@@ -1,14 +1,19 @@
 import React from "react";
 import { Component } from "react";
 
-
+const styles = {
+    margin: '20px',
+    width: '250px',
+    height: '250px',
+    backgroundColor: '#ddd',
+  };
 
 class Entry extends Component { 
     render() {
         let disp;
         if (this.props.display == "full"){
             disp = (
-                <div className="entryFull">
+                <div className="entryFull" style={styles}>
                     <h1>{this.props.entry.title}</h1>
                     <div className="tags">
                         <ul className="tagsRow" > 
@@ -16,11 +21,11 @@ class Entry extends Component {
                                 return(<li>{element}</li>);
                             })}
                         </ul>
-                        <div className="tagsRow" > 
-                            People: {this.props.entry.places.map(ele => {
+                        <ul className="tagsRow" > 
+                            Places: {this.props.entry.places.map(ele => {
                                 return(<li>{ele}</li>);
                             } )}
-                        </div>
+                        </ul>
                     </div>
                 </div>
             )
