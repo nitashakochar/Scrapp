@@ -12,10 +12,43 @@
   <div id="App"></div>
 </body>
 
+<script>
+	// You can also require other files to run in this process
+
+	var entrynum = 0;
+
+	document.ondragover = document.ondrop = (ev) => {
+		ev.preventDefault()
+	}
+
+	document.body.ondrop = (ev) => {
+		let entries = new Array();
+		for (let i = 0; i < ev.dataTransfer.files.length; i++) {
+			//console.log(ev.dataTransfer.files[i]);
+			var fs = require('fs');
+			
+			var entry = ev.dataTransfer.files[i].path;
+			entries.push(entry);
+		}
+
+		var filename = process.cwd() + "/current_entry.json";
+
+		fs.writeFile(filename, JSON.stringify(entries), function (err) {
+			if (err) throw err;
+			console.log(filename);
+		});
+		entrynum++;
+
+		ev.preventDefault()
+		
+	}
+</script>
+
 <script type="text/jsx">
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {AppContainer} from 'react-hot-loader';
+
 
 const render = () => {
   const App = require('./app').default;
