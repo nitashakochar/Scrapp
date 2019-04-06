@@ -7,7 +7,7 @@ import Entry from './entry';
 const entries = [
   {
     people: ['Nitasha', 'Regina'],
-    places: ['Spanos, Hitchcock'],
+    places: ['Spanos', 'Hitchcock'],
     journals: ['sad', 'major'],
     tags: ['stress', 'fun'],
     title: 'first entry',
@@ -15,7 +15,7 @@ const entries = [
   },
   {
     people: ['Nitasha', 'Regina'],
-    places: ['Spanos, Hitchcock'],
+    places: ['Spanos', 'Hitchcock'],
     journals: ['sad', 'major'],
     tags: ['stress', 'fun'],
     title: 'first entry',
@@ -28,9 +28,9 @@ class Journal extends Component {
   render() {
     return (
       <div>
-        {entries.map(entryDetail => (
-          <Entry display="full" entry={entryDetail} />
-        ))}
+        {entries.map(entryDetail => {
+          return(<Entry display="full" entry={entryDetail} />)}
+          )}
       </div>
     );
   }

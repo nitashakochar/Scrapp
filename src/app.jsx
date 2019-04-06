@@ -17,6 +17,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
+        <Nav></Nav>
+        <Journal />
         <h2>Welcome to React!</h2>
         <button color="blue" shadowSize={2}>
           Click Me
