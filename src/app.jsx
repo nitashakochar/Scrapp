@@ -18,7 +18,7 @@ export default class App extends React.Component {
           Click Me
         </button>
         <Entry display="full" entry={entryData} />
-        <Entry display="cover"/>
+        <Entry display="cover" />
       </div>
     );
   }
