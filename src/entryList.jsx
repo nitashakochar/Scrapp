@@ -12,6 +12,7 @@ const entries = [
     tags: ['stress', 'fun'],
     title: 'first entry',
     content: 'hello world',
+    date: 'April 6, 2019',
   },
   {
     people: ['Nitasha', 'Regina'],
@@ -20,14 +21,15 @@ const entries = [
     tags: ['stress', 'fun'],
     title: 'first entry',
     content: 'hello world',
+    date: 'April 6, 2019',
   },
 ];
 
 console.log(entries);
-class Journal extends Component {
+class EntryList extends Component {
   render() {
     return (
-      <div>
+      <div className="entry-list">
         {entries.map(entryDetail => {
           return(<Entry display="full" entry={entryDetail} />)}
           )}
@@ -36,4 +38,4 @@ class Journal extends Component {
   }
 }
 
-export default Journal;
+export default EntryList;
