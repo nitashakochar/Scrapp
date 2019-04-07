@@ -9,6 +9,7 @@ const styles = {
   backgroundColor: "#ddd"
 };
 
+
 class Entry extends Component {
   constructor() {
     super();
