@@ -91,7 +91,7 @@ class Entry extends Component {
         <div className="entryCover">
           <h1>{new Date(this.props.entry.date).toDateString()}</h1>
           <h2>{this.props.entry.title}</h2>
-          <p>{this.props.entry.content}</p>
+          <p>{this.props.entry.content.substring(0,100)}...</p>
         </div>
       );
     }
