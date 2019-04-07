@@ -31,7 +31,7 @@ class EntryList extends Component {
     return (
       <div className="entry-list">
         {this.props.entries.map(entryDetail => {
-          return(<Entry display="cover" entry={entryDetail} />)}
+          return(<Entry display="full" entry={entryDetail} />)}
           )}
       </div>
     );
