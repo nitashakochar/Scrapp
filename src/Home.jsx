@@ -6,8 +6,7 @@ class Home extends Component {
     return (
       <div className="home-page"> 
         <h1>
-          This is the homepage, where all of the journals, entries, and other
-          dashboard-y stuff goes.
+          Dashboard
         </h1>
       </div>
     );
