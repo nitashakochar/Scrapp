@@ -3,6 +3,7 @@ import Entry from "./entry";
 import Nav from "./nav";
 import Home from "./home";
 import Create from "./create";
+import Entries from "./entries";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 
 import EntryList from "./entryList";
