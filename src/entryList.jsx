@@ -20,8 +20,8 @@ const entries = [
     journals: ['sad', 'major'],
     tags: ['stress', 'fun'],
     title: 'second entry',
-    content: 'hello world',
-    date: 'April 6, 2019',
+    content: 'goodbye world',
+    date: 'April 7, 2019',
   },
 ];
 

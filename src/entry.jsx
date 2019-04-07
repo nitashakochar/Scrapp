@@ -88,7 +88,8 @@ class Entry extends Component {
     } else {
       disp = (
         <div className="entryCover">
-          <h1>{this.props.entry.title}</h1>
+          <h1>{this.props.entry.date}</h1>
+          <h2>{this.props.entry.title}</h2>
           <p>{this.props.entry.content}</p>
         </div>
       );
