@@ -6,12 +6,6 @@ import Create from "./create";
 import Entries from "./entries";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import EntryList from "./entryList";
-import {
-	Route,
-	NavLink,
-	HashRouter
-} from "react-router-dom";
-import EntryList from "./entryList";
 
 // for writing to and reading from file
 var fs = require('fs');
@@ -68,6 +62,7 @@ export default class App extends React.Component {
       if (err) throw err;
       let allE = JSON.parse(data);
       this.setState({all: allE, loaded: true});
+      console.log(this.state.all[1]);
     });
 
   }
