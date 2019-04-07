@@ -3,17 +3,12 @@ import Entry from "./entry";
 import Nav from "./nav";
 import Home from "./home";
 import Create from "./create";
-import {
-	Route,
-	NavLink,
-	HashRouter
-} from "react-router-dom";
+import { Route, NavLink, HashRouter } from "react-router-dom";
 
 import EntryList from "./entryList";
 
-
 const entryData = {
-  date: 'April 8, 2019',
+  date: "April 8, 2019",
   people: ["Anna", "Shep"],
   places: ["Dartmouth", "Thayer"],
   journals: ["happy", "major"],
@@ -26,23 +21,17 @@ const entryData = {
 
 export default class App extends React.Component {
   render() {
-	  return (
-		<HashRouter>
-		<div>
-		<Nav></Nav>
-		<div className="right-side">
-			<Route exact path="/" component={Home} />
-			<Route path="/create" component={Create} />
-		</div>
-        <EntryList />
-        <h2>Welcome to React!</h2>
-        <button color="blue" shadowSize={2}>
-          Click Me
-        </button>
-        <Entry display="full" entry={entryData} />
-        <Entry display="cover" entry={entryData}/>
-			  </div>
-		  </HashRouter>
+    return (
+      <HashRouter>
+        <div className="app">
+          <Nav />
+          <div className="right-side">
+            <Route exact path="/" component={Home} />
+            <Route path="/create" component={Create} />
+            <EntryList />
+          </div>
+        </div>
+      </HashRouter>
     );
   }
 }
