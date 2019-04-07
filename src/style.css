@@ -13,6 +13,7 @@ body {
   justify-content: flex-start;
   align-content: flex-start;
   text-align: left;
+  color: white;
 }
 
 .tagsRow {
@@ -132,4 +133,8 @@ button {
 
 .home-page { 
     margin: 5%;
+}
+
+.fa-times:before{
+  color: white;
 }
