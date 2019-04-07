@@ -123,7 +123,7 @@ export default class App extends React.Component {
               <Route exact path="/" component={Home} />
               <Route path="/create" component={Create} />
               <Route path="/entries" component={Entries} />
-              <EntryList />
+              <EntryList entries={this.state.all}/>
             </div>
            
           </div>

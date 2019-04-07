@@ -59,7 +59,7 @@ class Entry extends Component {
       disp = (
         <div className="entryFull">
           <div className="titleRow">
-            <h1>{this.props.entry.date}</h1>
+            <h1>{this.props.entry.date.toDateString()}</h1>
             <div className="entry-buttons">
               <button id="download-button">Download</button>
               <button
@@ -89,7 +89,7 @@ class Entry extends Component {
     } else {
       disp = (
         <div className="entryCover">
-          <h1>{this.props.entry.date}</h1>
+          <h1>{new Date(this.props.entry.date).toDateString()}</h1>
           <h2>{this.props.entry.title}</h2>
           <p>{this.props.entry.content}</p>
         </div>

@@ -30,7 +30,7 @@ class EntryList extends Component {
   render() {
     return (
       <div className="entry-list">
-        {entries.map(entryDetail => {
+        {this.props.entries.map(entryDetail => {
           return(<Entry display="cover" entry={entryDetail} />)}
           )}
       </div>
