@@ -3,18 +3,12 @@ import Entry from "./entry";
 import Nav from "./nav";
 import Home from "./home";
 import Create from "./create";
-import Entries from "./entries";
-import {
-	Route,
-	NavLink,
-	HashRouter
-} from "react-router-dom";
+import { Route, NavLink, HashRouter } from "react-router-dom";
 
 import EntryList from "./entryList";
 
-
 const entryData = {
-  date: 'April 8, 2019',
+  date: "April 8, 2019",
   people: ["Anna", "Shep"],
   places: ["Dartmouth", "Thayer"],
   journals: ["happy", "major"],
