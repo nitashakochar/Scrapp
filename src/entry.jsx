@@ -18,6 +18,8 @@ class Entry extends Component {
     };
   }
   render() {
+    let currDate = new Date(this.props.entry.date); 
+    currDate = (currDate.getMonth()+1) + "/" + currDate.getDate();
     let disp, tags;
     let dispTags = true;
     if (this.props.display == "full") {
@@ -89,7 +91,7 @@ class Entry extends Component {
     } else {
       disp = (
         <div className="entryCover">
-          <h1>{new Date(this.props.entry.date).toDateString()}</h1>
+          <h1>{currDate}</h1>
           <h2>{this.props.entry.title}</h2>
           <p>{this.props.entry.content.substring(0,100)}...</p>
         </div>
