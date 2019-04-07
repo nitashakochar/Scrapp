@@ -3,6 +3,7 @@ import Entry from "./entry";
 import Nav from "./nav";
 import Home from "./home";
 import Create from "./create";
+import Entries from "./entries";
 import {
 	Route,
 	NavLink,
@@ -33,14 +34,9 @@ export default class App extends React.Component {
 		<div className="right-side">
 			<Route exact path="/" component={Home} />
 			<Route path="/create" component={Create} />
+			<Route path="/entries" component={Entries} />
 		</div>
         <EntryList />
-        <h2>Welcome to React!</h2>
-        <button color="blue" shadowSize={2}>
-          Click Me
-        </button>
-        <Entry display="full" entry={entryData} />
-        <Entry display="cover" entry={entryData}/>
 			  </div>
 		  </HashRouter>
     );
