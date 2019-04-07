@@ -61,7 +61,7 @@ class Entry extends Component {
       disp = (
         <div className="entryFull">
           <div className="titleRow">
-            <h1>{this.props.entry.date.toDateString()}</h1>
+            <h1>{currDate}</h1>
             <div className="entry-buttons">
               <button id="download-button">Download</button>
               <button
