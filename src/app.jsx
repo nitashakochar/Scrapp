@@ -1,7 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 import Entry from "./entry";
 import Journal from "./journal";
-import Nav from "./Nav";
+import Nav from "./nav";
+import Home from "./home";
+import Create from "./create";
+import {
+	Route,
+	NavLink,
+	HashRouter
+} from "react-router-dom";
+
 
 
 const entryData = { people: ["Anna", "Shep"],
@@ -15,9 +23,14 @@ const entryData = { people: ["Anna", "Shep"],
 
 export default class App extends React.Component {
   render() {
-    return (
-      <div>
-        <Nav></Nav>
+	  return (
+		<HashRouter>
+		<div>
+				  <Nav></Nav>
+				  <div className="content">
+					  <Route exact path="/" component={Home} />
+					  <Route path="/create" component={Create} />
+				  </div>
         <Journal />
         <h2>Welcome to React!</h2>
         <button color="blue" shadowSize={2}>
@@ -25,7 +38,8 @@ export default class App extends React.Component {
         </button>
         <Entry display="full" entry={entryData} />
         <Entry display="cover" entry={entryData}/>
-      </div>
+			  </div>
+		  </HashRouter>
     );
   }
 }
