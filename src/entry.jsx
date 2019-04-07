@@ -61,7 +61,7 @@ class Entry extends Component {
       disp = (
         <div className="entryFull">
           <div className="titleRow">
-            <h1>{currDate}</h1>
+            <h2>{currDate}</h2>
             <div className="entry-buttons">
               <button id="download-button">Download</button>
               <button
@@ -79,7 +79,7 @@ class Entry extends Component {
           {tags}
 
           <div className="entryContent">
-            <h1>{this.props.entry.title}</h1>
+            <h3>{this.props.entry.title}</h3>
             <p>{this.props.entry.content}</p>
 
             <div className="entryImages">
@@ -91,8 +91,8 @@ class Entry extends Component {
     } else {
       disp = (
         <div className="entryCover">
-          <h1>{currDate}</h1>
-          <h2>{this.props.entry.title}</h2>
+          <h2>{currDate}</h2>
+          <h3>{this.props.entry.title}</h3>
           <p>{this.props.entry.content.substring(0,100)}...</p>
         </div>
       );
