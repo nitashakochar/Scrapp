@@ -3,6 +3,8 @@ import Entry from "./entry";
 import Nav from "./nav";
 import Home from "./home";
 import Create from "./create";
+import { Route, NavLink, HashRouter } from "react-router-dom";
+import EntryList from "./entryList";
 import {
 	Route,
 	NavLink,
@@ -15,8 +17,9 @@ var fs = require('fs');
 var filename = process.cwd() + "/entries.json";
 
 
+        
 const entryData = {
-  date: 'April 8, 2019',
+  date: "April 8, 2019",
   people: ["Anna", "Shep"],
   places: ["Dartmouth", "Thayer"],
   journals: ["happy", "major"],
@@ -71,23 +74,17 @@ export default class App extends React.Component {
   render() {
     if (this.state.loaded) {
        return (
-          <HashRouter>
-          <div>
-          <Nav></Nav>
+      <HashRouter>
+        <div className="app">
+          <Nav />
           <div className="right-side">
             <Route exact path="/" component={Home} />
             <Route path="/create" component={Create} />
+            <EntryList />
           </div>
-              <EntryList />
-              <h2>Welcome to React!</h2>
-              <button color="blue" shadowSize={2}>
-                Click Me
-              </button>
-              <Entry display="full" entry={entryData} />
-              <Entry display="cover" entry={this.state.all[1]}/>
-              </div>
-            </HashRouter>
-          );
+        </div>
+      </HashRouter>
+    );
     }
     else {
       return(<div>Loading...</div>);

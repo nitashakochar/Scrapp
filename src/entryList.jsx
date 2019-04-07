@@ -19,7 +19,7 @@ const entries = [
     places: ['Spanos', 'Hitchcock'],
     journals: ['sad', 'major'],
     tags: ['stress', 'fun'],
-    title: 'first entry',
+    title: 'second entry',
     content: 'hello world',
     date: 'April 6, 2019',
   },
@@ -31,7 +31,7 @@ class EntryList extends Component {
     return (
       <div className="entry-list">
         {entries.map(entryDetail => {
-          return(<Entry display="full" entry={entryDetail} />)}
+          return(<Entry display="cover" entry={entryDetail} />)}
           )}
       </div>
     );
